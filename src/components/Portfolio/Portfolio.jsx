@@ -53,8 +53,8 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <div className={`fixed inset-0 bg-black bg-opacity-75 ${overlayVisible ? `flex` : `hidden`} items-center justify-center z-50`}>
-                <div className="relative">
+            <div onClick={() => { CloseOverlay() }} className={`fixed inset-0 bg-black bg-opacity-75 ${overlayVisible ? `flex` : `hidden`} items-center justify-center z-50`}>
+                <div onClick={(e) => e.stopPropagation()}  className="relative">
                     <button className="absolute top-2 right-2 text-white text-3xl" onClick={() => { CloseOverlay() }} >
                         <i className="fa-solid fa-xmark hover:text-red-600 duration-500"></i>
                     </button>
